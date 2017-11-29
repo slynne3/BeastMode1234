@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.staceylm.foodnutritionactivity.MainActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp">
+
+    <Button
+        android:id="@+id/foodButton"
+        android:layout_width="384dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Click HERE to Continue"
+        app:layout_constraintTop_toBottomOf="@+id/text3"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/welcome"
+        style="@style/Widget.AppCompat.TextView.SpinnerItem"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:text="WELCOME"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="108dp" />
+
+    <TextView
+        android:id="@+id/tracker"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="60dp"
+        android:text="Find out Nutritional Values of what YOU eat!"
+        app:layout_constraintTop_toBottomOf="@+id/welcome"
+        tools:layout_editor_absoluteX="56dp" />
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Want to know more?  Click the Button Below!"
+        app:layout_constraintTop_toBottomOf="@+id/tracker"
+        tools:layout_editor_absoluteX="53dp" />
+
+</android.support.constraint.ConstraintLayout>
