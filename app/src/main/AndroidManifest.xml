@@ -16,7 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Calorie_Count"></activity>
+        <activity android:name=".Calorie_Count" />
+        <activity android:name=".Thermostat" />
+        <activity android:name=".Temperature_Rules"></activity>
     </application>
 
 </manifest>
