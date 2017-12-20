@@ -6,20 +6,43 @@
     android:layout_height="match_parent"
     tools:context="com.example.staceylm.foodnutritionactivity.Thermostat">
 
-    <Button
-        android:id="@+id/rulesButton"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/tempTitle"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/temp_rules" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:text="TextView" />
 
     <ListView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tempTitle"
+        android:layout_above="@+id/addTempButton"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/addTempButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:text="Add Temp" />
+
+    <Button
+        android:id="@+id/weeklyTempButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Weekly" />
+
+    <Button
+        android:id="@+id/aboutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/rulesButton">
-
-    </ListView>
+        android:text="About" />
 
 </RelativeLayout>

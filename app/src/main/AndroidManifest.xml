@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Thermostat" />
-        <activity android:name=".Temperature_Rules"></activity>
+        <activity android:name=".Temperature_Rules" />
+        <activity android:name=".DateTimeTempSpinner"></activity>
     </application>
 
 </manifest>

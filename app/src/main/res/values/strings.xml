@@ -9,4 +9,14 @@
     </string>
     <string name="update_notes">Update Notes</string>
     <string name="notes_header">Additional Notes</string>
+    <string name="select_weekday">Select the Weekday</string>
+    <string-array name="weekdayArray">
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+    </string-array>
 </resources>

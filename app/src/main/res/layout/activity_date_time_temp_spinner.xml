@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <Spinner
+        android:id="@+id/weekdaySpinner"
+        android:layout_width="243dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/dayLabel"
+        android:entries="@array/weekdayArray"
+        android:prompt="@string/select_weekday"/>
+
+    <TextView
+        android:id="@+id/dayLabel"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/tempLabel"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/weekdaySpinner"
+        android:text="TextView" />
+
+    <EditText
+        android:id="@+id/tempText"
+        android:layout_width="243dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/weekdaySpinner"
+        android:layout_toEndOf="@+id/dayLabel"
+        android:text="temp" />
+
+    <Button
+        android:id="@+id/cancelDateTime"
+        android:layout_width="190dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:text="Cancel" />
+
+    <Button
+        android:id="@+id/updateDateTime"
+        android:layout_width="190dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:text="Update" />
+
+    <TimePicker
+        android:id="@+id/timePicker3"
+        android:layout_width="483dp"
+        android:layout_height="360dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tempLabel" />
+</RelativeLayout>
