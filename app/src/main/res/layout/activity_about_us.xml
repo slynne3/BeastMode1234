@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutC"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.staceylm.foodnutritionactivity.AboutUs">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:titleTextColor="#ffffff"></android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/textAbout"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="          In order to use this interface properly, make sure you select an activity which you wish to use.  If using the tracker, type in your consumed food, calories, fats and carbs.  The information entered will be stored in a database.  You will be able to look at daily averages of your consumed food.  You may also delete entries when desired.  This application also provides a nutritional guide by the standards of Health Canada, in order to make healthy choices.  This application also provides information about why exercise is important.  We hope you enjoy this application and is useful for your daily needs."
+        android:textAlignment="viewStart"></TextView>
+</RelativeLayout>

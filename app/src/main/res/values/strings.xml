@@ -9,4 +9,8 @@
     </string>
     <string name="update_notes">Update Notes</string>
     <string name="notes_header">Additional Notes</string>
+    <string name="assignment">Assignment:</string>
+    <string name="grade">Grade:</string>
+    <string name="comment">Comment:</string>
+    <string name="insert">Insert</string>
 </resources>

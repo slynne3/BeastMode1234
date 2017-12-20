@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
@@ -7,42 +7,63 @@
     android:layout_height="match_parent"
     tools:context="com.example.staceylm.foodnutritionactivity.MainActivity"
     tools:layout_editor_absoluteX="0dp"
-    tools:layout_editor_absoluteY="81dp">
+    tools:layout_editor_absoluteY="81dp"
+    android:background="@color/colorPrimary">
 
     <Button
         android:id="@+id/foodButton"
         android:layout_width="384dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Click HERE to Continue"
-        app:layout_constraintTop_toBottomOf="@+id/text3"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="108dp"
+        android:text="Click HERE to ENTER"
         tools:layout_editor_absoluteX="0dp" />
 
     <TextView
         android:id="@+id/welcome"
         style="@style/Widget.AppCompat.TextView.SpinnerItem"
-        android:layout_width="100dp"
+        android:layout_width="200dp"
         android:layout_height="48dp"
-        android:text="WELCOME"
+        android:layout_alignBottom="@+id/foodTrack"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="76dp"
+        android:fontFamily="cursive"
+        android:text="Welcome To"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="36sp"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="108dp" />
 
     <TextView
-        android:id="@+id/tracker"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_marginTop="60dp"
-        android:text="Find out Nutritional Values of what YOU eat!"
-        app:layout_constraintTop_toBottomOf="@+id/welcome"
-        tools:layout_editor_absoluteX="56dp" />
-
-    <TextView
-        android:id="@+id/text3"
+        android:id="@+id/foodTrack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Want to know more?  Click the Button Below!"
-        app:layout_constraintTop_toBottomOf="@+id/tracker"
-        tools:layout_editor_absoluteX="53dp" />
+        android:layout_above="@+id/foodButton"
+        android:layout_alignStart="@+id/welcome"
+        android:layout_marginBottom="79dp"
+        android:fontFamily="cursive"
+        android:lineSpacingExtra="30sp"
+        android:text="Food Tracker"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/welcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="17dp"
+        android:src="@drawable/heart"
+        android:id="@+id/heart"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/welcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:src="@drawable/meal"
+        android:id="@+id/fork"/>
+
+
+</RelativeLayout>

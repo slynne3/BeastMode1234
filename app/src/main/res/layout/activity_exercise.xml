@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.staceylm.foodnutritionactivity.Exercise">
+
+    <TextView
+        android:id="@+id/exerciseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="47dp"
+        android:fontFamily="cursive"
+        android:text="Why is Exercise Important?"
+        android:textAlignment="textStart"
+        android:textSize="35dp"
+        tools:layout_editor_absoluteX="89dp"
+        tools:layout_editor_absoluteY="60dp" />
+
+    <TextView
+        android:id="@+id/mainContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/exerciseText"
+        android:layout_below="@+id/imageView3"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="25dp"
+        android:text="      As a huge believer in exercise, here are some key points as to how exercise can benefit you: "
+        android:textAlignment="textStart" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageView6"
+        android:layout_below="@+id/mainContent"
+        android:text=" 1. Weight Control \n 2. Prevent Health Problems \n 3. Improves your mood \n 4. Energy Booster \n 5. Improves your sleep \n 6. Can be a social activity"
+        android:textAlignment="textStart" />
+
+    <Button
+        android:id="@+id/btnClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="33dp"
+        android:text="Click for Motivation!" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/exerciseText"
+        android:layout_below="@+id/exerciseText"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="45dp"
+        app:srcCompat="@drawable/run" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView3"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/swim" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView4"
+        android:layout_toEndOf="@+id/btnClick"
+        app:srcCompat="@drawable/dumbell" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnClick"
+        android:layout_below="@+id/text2"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/bike1" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/btnClick"
+        android:layout_alignTop="@+id/imageView6"
+        app:srcCompat="@drawable/bike2" />
+
+</RelativeLayout>

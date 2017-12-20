@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.staceylm.foodnutritionactivity.NutritionGuide">
+
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:fontFamily="cursive"
+        android:text="Nutritional Food Guide"
+        android:textSize="36sp"
+        tools:layout_editor_absoluteX="168dp"
+        tools:layout_editor_absoluteY="63dp" />
+
+    <ProgressBar
+        android:id="@+id/prgs"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/text1"
+        android:layout_marginTop="25dp" />
+
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/text1"
+        android:layout_marginTop="177dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/prgs"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:text="Below, you will find the link to Canada's Food Guide. \n\nThis Guide will give you a recommended amount of servings of each type of food in a healthy diet."
+        android:textAlignment="center" />
+
+</RelativeLayout>
+
+
+
+
+
