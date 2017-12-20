@@ -4,9 +4,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity  extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,10 +16,11 @@ public class MainActivity extends AppCompatActivity {
 
 
         final Button foodButton = (Button) findViewById(R.id.foodButton);
-        final TextView tracker = (TextView) findViewById(R.id.tracker);
+        final TextView foodTrack = (TextView) findViewById(R.id.foodTrack);
         final TextView welcome = (TextView) findViewById(R.id.welcome);
-        final TextView text3 = (TextView) findViewById(R.id.text3);
-
+       final ImageView heart = (ImageView) findViewById(R.id.heart);
+        final ImageView fork = (ImageView) findViewById(R.id.fork);
+    
         foodButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -26,9 +28,11 @@ public class MainActivity extends AppCompatActivity {
                 MainMenu mainMenu = new MainMenu();
                 getSupportFragmentManager().beginTransaction().add(R.id.container, mainMenu).commit();
                 foodButton.setVisibility(view.GONE);
-                tracker.setVisibility(view.GONE);
+                heart.setVisibility(view.GONE);
                 welcome.setVisibility(view.GONE);
-                text3.setVisibility(view.GONE);
+                fork.setVisibility(view.GONE);
+                foodTrack.setVisibility(view.GONE);
+              
             }
         });
     }

@@ -42,4 +42,8 @@
     <string name="add_temp_button">Add Rule</string>
     <string name="weekly_weather">Weekly Weather</string>
     <string name="temp_about">About</string>
+    <string name="assignment">Assignment:</string>
+    <string name="grade">Grade:</string>
+    <string name="comment">Comment:</string>
+    <string name="insert">Insert</string>
 </resources>

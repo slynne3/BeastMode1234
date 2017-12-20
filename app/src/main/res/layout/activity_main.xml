@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
@@ -7,50 +7,63 @@
     android:layout_height="match_parent"
     tools:context="com.example.staceylm.foodnutritionactivity.MainActivity"
     tools:layout_editor_absoluteX="0dp"
-    tools:layout_editor_absoluteY="81dp">
+    tools:layout_editor_absoluteY="81dp"
+    android:background="@color/colorPrimary">
 
     <Button
         android:id="@+id/foodButton"
-        android:layout_width="0dp"
+        android:layout_width="384dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="126dp"
-        android:layout_marginTop="32dp"
-        android:text="Click HERE to Continue"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcome" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="108dp"
+        android:text="@string/click_here_to_enter"
+        tools:layout_editor_absoluteX="0dp" />
 
     <TextView
         android:id="@+id/welcome"
-        android:layout_width="100dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="181dp"
-        android:layout_marginTop="108dp"
-        android:text="WELCOME"
-        app:layout_constraintBottom_toTopOf="@+id/foodButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        style="@style/Widget.AppCompat.TextView.SpinnerItem"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_alignBottom="@+id/foodTrack"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="76dp"
+        android:fontFamily="cursive"
+        android:text="@string/welcome"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="36sp"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="108dp" />
 
     <TextView
-        android:id="@+id/tracker"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_marginTop="60dp"
-        android:text="Find out Nutritional Values of what YOU eat!"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcome" />
-
-    <TextView
-        android:id="@+id/text3"
+        android:id="@+id/foodTrack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Want to know more?  Click the Button Below!"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tracker" />
+        android:layout_above="@+id/foodButton"
+        android:layout_alignStart="@+id/welcome"
+        android:layout_marginBottom="79dp"
+        android:fontFamily="cursive"
+        android:lineSpacingExtra="30sp"
+        android:text="@string/food_tracker"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/welcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="17dp"
+        android:src="@drawable/heart"
+        android:id="@+id/heart"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/welcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:src="@drawable/meal"
+        android:id="@+id/fork"/>
+
+
+</RelativeLayout>
