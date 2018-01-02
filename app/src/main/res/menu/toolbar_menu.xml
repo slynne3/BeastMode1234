@@ -8,7 +8,7 @@
 
     <item
         android:id="@+id/action_one"
-        android:icon="@drawable/heart"
+        android:icon="@drawable/activity"
         android:orderInCategory="50"
         android:title="One"
         app:showAsAction="always" />
@@ -20,14 +20,14 @@
         app:showAsAction="always" />
     <item
         android:id="@+id/action_three"
-        android:icon="@drawable/heart"
+        android:icon="@drawable/temp"
         android:orderInCategory="104"
         android:title="Three"
         app:showAsAction="always" />
 
     <item
         android:id="@+id/action_four"
-        android:icon="@drawable/heart"
+        android:icon="@drawable/gas"
         android:orderInCategory="104"
         android:title="Three"
         app:showAsAction="always"/>

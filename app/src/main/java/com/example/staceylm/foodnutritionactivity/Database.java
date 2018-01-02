@@ -1,149 +1,163 @@
 package com.example.staceylm.foodnutritionactivity;
 
-import android.app.AlertDialog;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v4.widget.SimpleCursorAdapter;
+import android.support.v7.app.AppCompatActivity;
+import android.text.format.Time;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.staceylm.foodnutritionactivity.DatabaseHelper;
-import com.example.staceylm.foodnutritionactivity.R;
+import java.text.SimpleDateFormat;
 
+/**
+ * Created by StaceyLM on 2017-12-21.
+ */
 
-public class Database extends ActionBarActivity {
-    DatabaseHelper myDb;
-    EditText editName,editSurname,editMarks ,editTextId;
-    Button btnAddData;
-    Button btnviewAll;
-    Button btnDelete;
-    Button btnviewUpdate;
+public class Database extends AppCompatActivity {
+    foodDatabaseHelper myDb;
+    Time today = new Time(Time.getCurrentTimezone());
+    EditText foodUser, calorUser, fatsUser, carbsUser;
+    Button buttonAdd, buttonDel, countcals;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        myDb = new DatabaseHelper(this);
+        setContentView(R.layout.database_food);
         
-        editName = (EditText)findViewById(R.id.editText_name);
-        editSurname = (EditText)findViewById(R.id.editText_surname);
-        editMarks = (EditText)findViewById(R.id.editText_Marks);
-        editTextId = (EditText)findViewById(R.id.editText_id);
-        btnAddData = (Button)findViewById(R.id.button_add);
-        btnviewAll = (Button)findViewById(R.id.button_viewAll);
-        btnviewUpdate= (Button)findViewById(R.id.button_update);
-        btnDelete= (Button)findViewById(R.id.button_delete);
-        AddData();
+        
+        foodUser = (EditText) findViewById(R.id.foodUser);
+        calorUser = (EditText) findViewById(R.id.calorUser);
+        fatsUser = (EditText) findViewById(R.id.fatsUser);
+        carbsUser = (EditText) findViewById(R.id.carbsUser);
+        TextView dateText = (TextView) findViewById(R.id.dateText);
+    
+        countcals = (Button) findViewById(R.id.countCals);
+    
+        long date = System.currentTimeMillis();
+        SimpleDateFormat sdf = new SimpleDateFormat("MMM MM dd, yyyy h:mm a");
+        String dateString = sdf.format(date);
+        dateText.setText(dateString);
+        
+        buttonAdd = (Button) findViewById(R.id.buttonAdd);
+        buttonDel = (Button) findViewById(R.id.delButton);
+    
+        listViewItemClick();
+        listviewItemLongClick();
+        openData();
+        addData();
         viewAll();
-        UpdateData();
-        DeleteData();
+        deleteAllRows();
+        countCals();
+    
     }
-    public void DeleteData() {
-        btnDelete.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Integer deletedRows = myDb.deleteData(editTextId.getText().toString());
-                        if(deletedRows > 0)
-                            Toast.makeText(Database.this,"Data Deleted",Toast.LENGTH_LONG).show();
-                        else
-                            Toast.makeText(Database.this,"Data not Deleted",Toast.LENGTH_LONG).show();
-                    }
-                }
-        );
+    
+    private void openData() {
+        myDb = new foodDatabaseHelper(this);
+        myDb.openDB();
     }
-    public void UpdateData() {
-        btnviewUpdate.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        boolean isUpdate = myDb.updateData(editTextId.getText().toString(),
-                                editName.getText().toString(),
-                                editSurname.getText().toString(),editMarks.getText().toString());
-                        if(isUpdate == true)
-                            Toast.makeText(Database.this,"Data Update",Toast.LENGTH_LONG).show();
-                        else
-                            Toast.makeText(Database.this,"Data not Updated",Toast.LENGTH_LONG).show();
-                    }
-                }
-        );
-    }
-    public  void AddData() {
-        btnAddData.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        boolean isInserted = myDb.insertData(editName.getText().toString(),
-                                editSurname.getText().toString(),
-                                editMarks.getText().toString() );
-                        if(isInserted == true)
-                            Toast.makeText(Database.this,"Data Inserted",Toast.LENGTH_LONG).show();
-                        else
-                            Toast.makeText(Database.this,"Data not Inserted",Toast.LENGTH_LONG).show();
-                    }
-                }
-        );
+    
+    public void addData() {
+        buttonAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            
+                // today.setToNow();
+                //  String timestamp = today.format("%Y-%m-%d  %H:%M:%S");
+            
+                myDb.insertRow(foodUser.getText().toString(),
+                        calorUser.getText().toString(),
+                        fatsUser.getText().toString(),
+                        carbsUser.getText().toString());
+                viewAll();
+            
+            }
+        });
+    
     }
     
     public void viewAll() {
-        btnviewAll.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Cursor res = myDb.getAllData();
-                        if(res.getCount() == 0) {
-                            // show message
-                            showMessage("Error","Nothing found");
-                            return;
-                        }
-                        
-                        StringBuffer buffer = new StringBuffer();
-                        while (res.moveToNext()) {
-                            buffer.append("Id :"+ res.getString(0)+"\n");
-                            buffer.append("Name :"+ res.getString(1)+"\n");
-                            buffer.append("Surname :"+ res.getString(2)+"\n");
-                            buffer.append("Marks :"+ res.getString(3)+"\n\n");
-                        }
-                        
-                        // Show all data
-                        showMessage("Data",buffer.toString());
-                    }
-                }
-        );
-    }
-    
-    public void showMessage(String title,String Message){
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setCancelable(true);
-        builder.setTitle(title);
-        builder.setMessage(Message);
-        builder.show();
-    }
-    
-    
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-    
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+        Cursor res = myDb.getAllRows();
+        String[] foodInfo = new String[]{foodDatabaseHelper.KEY_ID, foodDatabaseHelper.COL2, foodDatabaseHelper.COL3, foodDatabaseHelper.COL4, foodDatabaseHelper.COL5};
         
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        int[] toViewIDs = new int[]{R.id.lv1, R.id.lv2, R.id.lv3, R.id.lv4, R.id.lv5};
+        
+        SimpleCursorAdapter myCursorAdapter;
+        myCursorAdapter = new SimpleCursorAdapter(getBaseContext(), R.layout.item_layout, res, foodInfo, toViewIDs, 0);
+        
+        ListView lv = (ListView) findViewById(R.id.listView);
+        lv.setAdapter(myCursorAdapter);
+    
+        myCursorAdapter.notifyDataSetChanged();
+    }
+    
+    public void countCals(){
+        final ListView lv = (ListView) findViewById(R.id.listView);
+        
+        countcals.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Total number of Food Items Added to the list this session :" + lv.getAdapter().getCount(), Toast.LENGTH_LONG).show();
+            }
+
+        });
+
+ 
+       
+    }
+    
+    private void updateTask(long id) {
+        Cursor res = myDb.getRow(id);
+        if (res.moveToFirst()) {
+            String foodtype = foodUser.getText().toString();
+            String cals = calorUser.getText().toString();
+            String fats = fatsUser.getText().toString();
+            String carbs = carbsUser.getText().toString();
+            //today.setToNow();
+            //String timestamp = today.format("%Y-%m-%d  %H:%M:%S");
+            myDb.updateRow(id, foodtype, cals, fats, carbs);
         }
+        res.close();
+    }
+    
+    private void listViewItemClick() {
+        ListView lv = (ListView) findViewById(R.id.listView);
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long id) {
+                updateTask(id);
+                viewAll();
+            }
+        });
         
-        return super.onOptionsItemSelected(item);
+    }
+    
+    private void deleteAllRows() {
+        buttonDel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDb.deleteAll();
+                viewAll();
+            }
+        });
+    }
+    
+    private void listviewItemLongClick() {
+        ListView lv = (ListView) findViewById(R.id.listView);
+        lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+    
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long id) {
+                myDb.deleteRow(id);
+                viewAll();
+                return false;
+            }
+        });
     }
 }

@@ -37,10 +37,8 @@ public class ToolbarTest extends AppCompatActivity {
                // Button bActivityTracker = findViewById(R.id.bActivityTracker);
                 break;
             case R.id.action_two:
-                
                         Intent f = new Intent(ToolbarTest.this, MainActivity.class);
                         startActivityForResult(f, 100);
-              
                 
                 break;
             case R.id.action_three:
@@ -50,7 +48,7 @@ public class ToolbarTest extends AppCompatActivity {
             case R.id.action_four:
                 //Button bAutomobile = findViewById(R.id.bAutomobile);
             case R.id.action_about:
-                Toast t2 = Toast.makeText(ToolbarTest.this, "Version 1.0 Stacey Mulder", Toast.LENGTH_LONG);
+                Toast t2 = Toast.makeText(ToolbarTest.this, "Version 1.0 BeastMode Applications", Toast.LENGTH_LONG);
                 t2.show();
                 break;
         }

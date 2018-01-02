@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/holo_purple"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/carbsUser"
+        android:layout_marginTop="17dp"
+        android:text="Add Food To Your List :)" />
+
+    <TextView
+        android:id="@+id/foodName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/calorUser"
+        android:layout_marginEnd="12dp"
+        android:layout_toStartOf="@+id/foodUser"
+        android:text="Food"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/calName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/calorUser"
+        android:layout_alignBottom="@+id/calorUser"
+        android:layout_alignEnd="@+id/carbName"
+        android:text="Calories"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/fatName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/foodName"
+        android:layout_below="@+id/calorUser"
+        android:layout_marginTop="13dp"
+        android:text="Fats"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/carbName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/carbsUser"
+        android:layout_alignBottom="@+id/carbsUser"
+        android:layout_alignStart="@+id/fatName"
+        android:text="Carbs"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/foodUser"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/dateText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/calorUser"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/foodUser"
+        android:layout_marginTop="14dp"
+        android:layout_toEndOf="@+id/calName"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/fatsUser"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignStart="@+id/calorUser"
+        android:layout_below="@+id/calorUser"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/carbsUser"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignStart="@+id/fatsUser"
+        android:layout_below="@+id/fatsUser"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <ListView
+
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/buttonAdd"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="73dp" />
+
+    <Button
+        android:id="@+id/delButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignTop="@+id/buttonAdd"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp"
+        android:text="Delete All Entries" />
+
+    <TextView
+        android:id="@+id/dateText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <Button
+        android:id="@+id/countCals"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignBaseline="@+id/foodUser"
+        android:layout_alignBottom="@+id/foodUser"
+        android:layout_marginStart="24dp"
+        android:layout_toEndOf="@+id/foodUser"
+        android:text="+"
+        android:textSize="10dp" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/countCals"
+        android:layout_below="@+id/fatName"
+        app:srcCompat="@drawable/anchor" />
+
+</RelativeLayout>
