@@ -44,7 +44,7 @@
         android:layout_below="@+id/prgs"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="19dp"
-        android:text="Below, you will find the link to Canada's Food Guide. \n\nThis Guide will give you a recommended amount of servings of each type of food in a healthy diet."
+        android:text="@string/foodGuide"
         android:textAlignment="center" />
 
 </RelativeLayout>

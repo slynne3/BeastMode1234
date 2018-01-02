@@ -15,7 +15,7 @@
         1. Selecting a rule in the temperature list will allow you to update or delete the rule.\n
         2. Author and Version information can be found at the bottom of this page.
     </string>
-    <string name="update_notes">Update Notes</string>
+     <string name="update_notes">Update Notes</string>
     <string name="notes_header">Additional Notes</string>
     <string name="select_weekday">Select the Weekday</string>
     <string-array name="weekdayArray">
@@ -46,4 +46,15 @@
     <string name="grade">Grade:</string>
     <string name="comment">Comment:</string>
     <string name="insert">Insert</string>
+    <string name="welcome">Welcome To</string>
+    <string name="click_here_to_enter">Click HERE to ENTER</string>
+    <string name="listView1">Click here to keep track of your daily intake of Food</string>
+    <string name="listView2">Guide to why eating Healthy will make you feel BETTER</string>
+    <string name="listView3">Why is Exercise Important?</string>
+    <string name="listView4">About US</string>
+    <string name="in_order_to_use_this_interface_properly_make_sure_you_select_an_activity_you_wish_to_use_if_using_the_tracker_type_in_your_consumed_food_calories_fats_and_carbs_the_information_entered_will_be_stored_in_a_database_you_will_be_able_to_modify_your_entries_as_desired_you_may_also_delete_your_entries_when_desired_this_application_also_provides_a_nutritional_guide_by_the_standards_of_health_canada_in_order_to_make_healthy_choices_this_application_also_provides_information_about_why_exercise_is_important_we_hope_you_enjoy_this_application_and_is_useful_for_your_daily_needs">In order to use this interface properly, make sure you select an activity you wish to use. If using the tracker, type in your consumed food, calories, fats and carbs. The information entered will be stored in a database. You will be able to modify your entries as desired. You may also delete your entries when desired. This application also provides a nutritional guide by the standards of Health Canada, in order to make healthy choices. This application also provides information about why exercise is important. We hope you enjoy this application and is useful for your daily needs.</string>
+    <string name="as_a_huge_believer_in_exercise_here_are_some_key_points_as_to_how_exercise_can_benefit_you">As a huge believer in exercise, here are some key points as to how exercise can benefit you:</string>
+    <string name="_1_weight_control_n_2_prevent_health_problems_n_3_improves_your_mood_n_4_energy_booster_n_5_improves_your_sleep_n_6_can_be_a_social_activity">1. Weight Control\n   2. Prevent Health Problems\n   3. Improves your mood\n   4. Energy Booster\n   5. Improves your sleep\n   6. Can be a social activity\n</string>
+    <string name="foodGuide">Below, you will find the link to Canada\'s Food Guide.   This Guide will give you a recommended amount of servings of each type of food in a healthy diet.</string>
+    <string name="food_tracker">Food Tracker</string>
 </resources>

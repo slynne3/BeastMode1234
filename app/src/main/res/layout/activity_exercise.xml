@@ -28,16 +28,17 @@
         android:layout_below="@+id/imageView3"
         android:layout_marginStart="12dp"
         android:layout_marginTop="25dp"
-        android:text="      As a huge believer in exercise, here are some key points as to how exercise can benefit you: "
+        android:text="@string/as_a_huge_believer_in_exercise_here_are_some_key_points_as_to_how_exercise_can_benefit_you"
         android:textAlignment="textStart" />
 
     <TextView
         android:id="@+id/text2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/imageView6"
+        android:layout_alignStart="@+id/mainContent"
         android:layout_below="@+id/mainContent"
-        android:text=" 1. Weight Control \n 2. Prevent Health Problems \n 3. Improves your mood \n 4. Energy Booster \n 5. Improves your sleep \n 6. Can be a social activity"
+        android:layout_marginTop="15dp"
+        android:text="@string/_1_weight_control_n_2_prevent_health_problems_n_3_improves_your_mood_n_4_energy_booster_n_5_improves_your_sleep_n_6_can_be_a_social_activity"
         android:textAlignment="textStart" />
 
     <Button

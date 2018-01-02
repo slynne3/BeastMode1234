@@ -76,17 +76,3 @@ public class NutritionGuide extends AppCompatActivity {
         
     }
 }
-    
-    //    public void showProgress() {
-      //      task.execute(10);
-            // start progress bar with initial progress 10
-            ///////////////////task.execute(10,10,null);
-
-        //}
-    
-    ///public void stopProgress() {
-       // task.cancel(true);
-   // }
-    //}
-
-

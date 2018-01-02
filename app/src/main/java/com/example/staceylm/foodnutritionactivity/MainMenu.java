@@ -27,10 +27,10 @@ public class MainMenu extends Fragment {
         listView.setVisibility(view.VISIBLE);
         
 
-        String[] menuItems = {"Click here to keep track of your daily intake of Food",
-                "Guide to why eating Healthy will make you feel BETTER",
-                "Why is Exercise Important?",
-                "About US"
+        String[] menuItems = {getString(R.string.listView1),
+                getString(R.string.listView2),
+                getString(R.string.listView3),
+                getString(R.string.listView4)
         };
 
         ArrayAdapter<String> listViewAdapter = new ArrayAdapter<String>(
