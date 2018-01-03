@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/temp_gradient_background"
+    tools:context="com.example.staceylm.foodnutritionactivity.WeeklyTemp">
+
+    <TextView
+        android:id="@+id/weeklyTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="@string/weekly_title"
+        android:textColor="#00004d"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        tools:fontFamily="monospace" />
+
+    <WebView
+        android:id="@+id/weeklyWeb"
+        android:layout_width="match_parent"
+        android:layout_height="490dp"
+        android:layout_below="@+id/weeklyTitle">
+
+    </WebView>
+
+    <ProgressBar
+        android:id="@+id/webProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/weeklyWeb"
+        />
+
+</RelativeLayout>

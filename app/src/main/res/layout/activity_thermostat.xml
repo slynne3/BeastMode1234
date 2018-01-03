@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/thermostat_main_id"
+    android:background="@drawable/temp_gradient_background"
     tools:context="com.example.staceylm.foodnutritionactivity.Thermostat">
 
     <TextView
@@ -12,37 +14,125 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:text="TextView" />
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#00004d"
+        android:text="@string/temp_listview_title"
+        tools:fontFamily="monospace"
+        />
 
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="329dp"
         android:layout_below="@+id/tempTitle"
+        android:id="@+id/tempList"
+        />
+
+    <TextView
+        android:id="@+id/dayLabel"
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:layout_above="@+id/tempLabel"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:text="@string/day_label"
+        android:textColor="#00004d"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        tools:fontFamily="monospace" />
+
+    <EditText
+        android:id="@+id/tempDay"
+        android:layout_width="243dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/dayLabel"
+        android:textSize="10sp"
+        tools:fontFamily="monospace"
+        android:inputType="text"
+        android:background="@drawable/tempshapes"/>
+
+    <TextView
+        android:id="@+id/tempLabel"
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:layout_above="@+id/timeLabel"
+        android:gravity="center"
+        android:text="@string/temp_label"
+        android:textColor="#00004d"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        tools:fontFamily="monospace"
+        />
+
+    <EditText
+        android:id="@+id/tempText"
+        android:layout_width="243dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/tempDay"
+        android:background="@drawable/tempshapes"
+        android:inputType="datetime"
+        android:textSize="10sp"
+        tools:fontFamily="monospace" />
+
+    <TextView
+        android:id="@+id/timeLabel"
+        android:layout_width="140dp"
+        android:layout_height="30dp"
         android:layout_above="@+id/addTempButton"
-        android:layout_alignParentStart="true" />
+        android:layout_alignStart="@+id/addTempButton"
+        android:gravity="center"
+        android:text="@string/time_label"
+        android:textColor="#00004d"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        tools:fontFamily="monospace" />
+
+    <EditText
+        android:id="@+id/timeText"
+        android:layout_width="243dp"
+        android:layout_height="30dp"
+        android:layout_above="@+id/weeklyTempButton"
+        android:layout_alignParentEnd="true"
+        android:inputType="datetime"
+        android:textSize="10sp"
+        tools:fontFamily="monospace"
+        android:background="@drawable/tempshapes"
+        />
 
     <Button
         android:id="@+id/addTempButton"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:text="Add Temp" />
+        style="@style/button_text"
+        android:backgroundTint="#ffffff"
+        android:text="@string/add_temp_button"
+        tools:fontFamily="monospace"/>
 
     <Button
         android:id="@+id/weeklyTempButton"
-        android:layout_width="wrap_content"
+        style="@style/button_text"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="Weekly" />
+        android:backgroundTint="#ffffff"
+        android:text="@string/weekly_weather"
+        tools:fontFamily="monospace"/>
 
     <Button
         android:id="@+id/aboutButton"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:text="About" />
+        style="@style/button_text"
+        android:backgroundTint="#ffffff"
+        android:text="@string/temp_about"
+        tools:fontFamily="monospace"/>
 
 </RelativeLayout>

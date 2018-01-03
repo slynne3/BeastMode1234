@@ -1,11 +1,19 @@
 <resources>
     <string name="app_name">Food Nutrition Activity</string>
     <string name="temp_rules">Temperature Guide</string>
-    <string name="temp_full_rules">
-        Here are the full rules: \n
-        Do not go over 21 degrees C. \n
-        Line break test. \n
-
+    <string name="user_guide">
+        There are 2 options available: <b>Add Temperature</b> and view the <b>Weekly Weather</b>.  \n
+        <b>Add Temperature Button:</b> \n
+        1. Select the day you wish to add a temperature rule to. \n
+        2. Input the temperature you would like to set your home at. \n
+        3. Select the time you wish the temperature to change at. \n
+        4. Use update to set the rule or cancel to go back to the previous screen. \n
+        \n
+        <b>Weekly Weather</b> Button: Displays the 7 day forecast. Great for knowing the temperature in advance. \n
+        \n
+        <b>Additional Note:</b>\n
+        1. Selecting a rule in the temperature list will allow you to update or delete the rule.\n
+        2. Author and Version information can be found at the bottom of this page.
     </string>
     <string name="update_notes">Update Notes</string>
     <string name="notes_header">Additional Notes</string>
@@ -19,4 +27,19 @@
         <item>Friday</item>
         <item>Saturday</item>
     </string-array>
+    <string name="weekly_title">"Weekly Weather</string>
+    <string name="instruction_title">User Instruction:</string>
+    <string name="author_version">Author/Version</string>
+    <string name="author_version_live">
+        Robert Wright \n
+        Version 1.0
+    </string>
+    <string name="delete_temp_button">Delete Weather Rule</string>
+    <string name="temp_listview_title">Temperature Schedule</string>
+    <string name="day_label">Day:</string>
+    <string name="temp_label">Temperature in °C:</string>
+    <string name="time_label">Time(24:00h):</string>
+    <string name="add_temp_button">Add Rule</string>
+    <string name="weekly_weather">Weekly Weather</string>
+    <string name="temp_about">About</string>
 </resources>
