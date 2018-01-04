@@ -9,27 +9,25 @@
         android:label="BeastMode Apps"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".ToolbarTest">
-        <activity android:name=".Calorie_Count" />
+        <activity android:name=".ToolbarTest" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".Database"> </activity>
-        <activity android:name=".MainActivity">
-       </activity>
-        <activity android:name=".NutritionGuide" />
-        <activity android:name=".AboutUs" />
-        <activity android:name=".Exercise"></activity>
-        <activity android:name=".Thermostat" />
-        <activity android:name=".about_temperature" />
-        <activity android:name=".WeeklyTemp" />
-        <activity android:name=".TemperatureDetails" />
-        <activity android:name=".TrackingActivity"></activity>
-        <activity android:name=".ShowActivityList"></activity>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+    <activity android:name=".Database"> </activity>
+    <activity android:name=".MainActivity" />
+    <activity android:name=".NutritionGuide" />
+    <activity android:name=".AboutUs" />
+    <activity android:name=".Exercise"></activity>
+    <activity android:name=".Thermostat" />
+    <activity android:name=".about_temperature" />
+    <activity android:name=".WeeklyTemp" />
+    <activity android:name=".TemperatureDetails" />
+    <activity android:name=".TrackingActivity"></activity>
+    <activity android:name=".ShowActivityList"></activity>
     </application>
+
 
 </manifest>
