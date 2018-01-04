@@ -42,7 +42,8 @@ public class ToolbarTest extends AppCompatActivity {
                 
                 break;
             case R.id.action_three:
-                //Button bThermostat = findViewById(R.id.bThermostat);
+                Intent temperatureIntent = new Intent(ToolbarTest.this, Thermostat.class);
+                startActivityForResult(temperatureIntent, 100);
                 
                                break;
             case R.id.action_four:
