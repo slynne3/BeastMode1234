@@ -6,20 +6,23 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
         android:label="BeastMode Apps"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
-        <activity android:name=".Calorie_Count" />
-        <activity android:name=".StartActivity">
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".ToolbarTest">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Database"> </activity>
+        <activity android:name=".MainActivity">
+       </activity>
+        <activity android:name=".NutritionGuide" />
+        <activity android:name=".Database" ></activity>
+        <activity android:name=".AboutUs" />
+        <activity android:name=".Exercise"></activity>
         <activity android:name=".Thermostat" />
         <activity android:name=".about_temperature" />
         <activity android:name=".WeeklyTemp" />
