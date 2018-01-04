@@ -20,14 +20,12 @@
         <activity android:name=".MainActivity">
        </activity>
         <activity android:name=".NutritionGuide" />
-        <activity android:name=".Database" ></activity>
         <activity android:name=".AboutUs" />
         <activity android:name=".Exercise"></activity>
         <activity android:name=".Thermostat" />
         <activity android:name=".about_temperature" />
         <activity android:name=".WeeklyTemp" />
         <activity android:name=".TemperatureDetails" />
-        <activity android:name=".TemperatureFragment"></activity>
     </application>
 
 </manifest>
