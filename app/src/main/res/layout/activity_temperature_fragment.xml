@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/temp_gradient_background"
+    tools:context="com.example.staceylm.foodnutritionactivity.TemperatureFragment">
+
+    <TextView
+        android:id="@+id/tempFragDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+
+    <Button
+        android:id="@+id/tempDeleteButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        style="@style/button_text"
+        android:backgroundTint="#ffffff"
+        tools:fontFamily="monospace"
+        android:text="@string/delete_temp_button" />
+
+</RelativeLayout>

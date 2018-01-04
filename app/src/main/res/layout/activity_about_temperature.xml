@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/temp_gradient_background"
+    tools:context="com.example.staceylm.foodnutritionactivity.about_temperature">
+
+    <TextView
+        android:id="@+id/userTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:gravity="left"
+        android:text="@string/instruction_title"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#00004d"
+        tools:fontFamily="monospace"
+        />
+
+    <TextView
+        android:id="@+id/userGuide"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/userTitle"
+        android:textColor="#00004d"
+        android:text="@string/user_guide"
+        tools:fontFamily="monospace"/>
+
+    <TextView
+        android:id="@+id/authorTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/userGuide"
+        android:gravity="left"
+        android:text="@string/author_version"
+        android:textColor="#00004d"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:fontFamily="monospace" />
+
+    <TextView
+        android:id="@+id/authorDetails"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/authorTitle"
+        android:textColor="#00004d"
+        android:text="@string/author_version_live"
+        tools:fontFamily="monospace"/>
+
+
+</RelativeLayout>
+

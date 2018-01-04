@@ -13,20 +13,20 @@ public class StartActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
-        // Button bActivityTracker = findViewById(R.id.bActivityTracker);
-        //Button bFoodTracker = (Button) findViewById(R.id.foodButton);
-        // Button bThermostat = findViewById(R.id.bThermostat);
-        // Button bAutomobile = findViewById(R.id.bAutomobile);
+        Button bActivityTracker = findViewById(R.id.bActivityTracker);
+        Button bFoodTracker = (Button) findViewById(R.id.bFoodTracker);
+        Button bThermostat = findViewById(R.id.bThermostat);
+        Button bAutomobile = findViewById(R.id.bAutomobile);
 
-//        bFoodTracker.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//               Intent foodTracker = new Intent(getApplicationContext(), MainActivity.class);
-//               // startActivity(foodTracker);
-//                startActivityForResult(foodTracker, 10);
-//            }
-//        });
-//
-//    }
+        bFoodTracker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               Intent foodTracker = new Intent(getApplicationContext(), Thermostat.class);
+              //  startActivity(foodTracker);
+                startActivityForResult(foodTracker, 10);
+            }
+       });
+
     }
+
 }

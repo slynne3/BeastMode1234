@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Food Nutrition Activity</string>
+    <string name="temp_rules">Guide de Température</string>
+    <string name="user_guide">
+        Il y a 2 options disponible: <b>Ajouter Température</b> et voir le <b>
+Météo pour la Semaine</b>.  \n
+        <b>Le bouton pour ajouter la Température:</b> \n
+        1. Sélectionnez le jour auquel vous souhaitez ajouter une règle de température. \n
+        2. Entrez la température que vous souhaitez définir. \n
+        3. Sélectionnez l'heure à laquelle vous souhaitez que la température change. \n
+        4. Utilisez le bouton de mise à jour pour définir la règle ou annuler pour revenir à l'écran précédent. \n
+        \n
+        <b>Météo pour la Semaine</b> Bouton: Affiche les prévisions sur 7 jours. Idéal pour connaître la température à l'avance. \n
+        \n
+        <b>Notes supplémentaire:</b>\n
+        1. La sélection d'une règle dans la liste des températures vous permettra de mettre à jour ou de supprimer la règle.\n
+        2. Les informations sur l'auteur et la version peuvent être trouvées au bas de cette page.
+    </string>
+    <string name="update_notes">Mise à jour Notes</string>
+    <string name="notes_header">Notes supplémentaire</string>
+    <string name="select_weekday">Sélectionnez le jour de la semaine</string>
+    <string-array name="weekdayArray">
+        <item>Dimanche</item>
+        <item>Lundi</item>
+        <item>Mardi</item>
+        <item>Mercredi</item>
+        <item>Jeudi</item>
+        <item>Vendredi</item>
+        <item>Samedi</item>
+    </string-array>
+    <string name="weekly_title">Météo pour la Semaine</string>
+    <string name="instruction_title">Instructions d\'utilisation:</string>
+    <string name="author_version">Auteur/Version</string>
+    <string name="author_version_live">
+        Robert Wright \n
+        Version 1.0
+    </string>
+    <string name="delete_temp_button">Supprimer la Règle</string>
+    <string name="temp_listview_title">Calendrier de Température</string>
+    <string name="day_label">Jour:</string>
+    <string name="temp_label">Température en °C:</string>
+    <string name="time_label">Heur(24:00h):</string>
+    <string name="add_temp_button">Ajouter une Règle</string>
+    <string name="weekly_weather">Météo pour la Semaine</string>
+    <string name="temp_about">À propos</string>
+</resources>
