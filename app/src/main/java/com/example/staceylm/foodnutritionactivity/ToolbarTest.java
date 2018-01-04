@@ -34,7 +34,8 @@ public class ToolbarTest extends AppCompatActivity {
         // Handle presses on the action bar items
         switch (item.getItemId()) {
             case R.id.action_one:
-               // Button bActivityTracker = findViewById(R.id.bActivityTracker);
+                Intent trackerIntent = new Intent(ToolbarTest.this, TrackingActivity.class);
+                startActivityForResult(trackerIntent, 100);
                 break;
             case R.id.action_two:
                         Intent f = new Intent(ToolbarTest.this, MainActivity.class);

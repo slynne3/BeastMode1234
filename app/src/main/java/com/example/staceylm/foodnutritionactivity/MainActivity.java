@@ -1,7 +1,9 @@
 package com.example.staceylm.foodnutritionactivity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -20,7 +22,7 @@ public class MainActivity  extends AppCompatActivity{
         final TextView welcome = (TextView) findViewById(R.id.welcome);
        final ImageView heart = (ImageView) findViewById(R.id.heart);
         final ImageView fork = (ImageView) findViewById(R.id.fork);
-    
+
         foodButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -35,5 +37,7 @@ public class MainActivity  extends AppCompatActivity{
               
             }
         });
+
+
     }
 }
