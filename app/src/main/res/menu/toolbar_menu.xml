@@ -32,4 +32,9 @@
         android:title="Three"
         app:showAsAction="always"/>
 
+    <item android:id="@+id/help"
+        android:title="Help"
+        android:orderInCategory="104"
+        app:showAsAction="never" />
+
 </menu>

@@ -57,4 +57,28 @@
     <string name="_1_weight_control_n_2_prevent_health_problems_n_3_improves_your_mood_n_4_energy_booster_n_5_improves_your_sleep_n_6_can_be_a_social_activity">1. Weight Control\n   2. Prevent Health Problems\n   3. Improves your mood\n   4. Energy Booster\n   5. Improves your sleep\n   6. Can be a social activity\n</string>
     <string name="foodGuide">Below, you will find the link to Canada\'s Food Guide.   This Guide will give you a recommended amount of servings of each type of food in a healthy diet.</string>
     <string name="food_tracker">Food Tracker</string>
+    <string name="new_activity">Select a new Activity</string>
+    <string name="label">Click the Button below to select a new Activity</string>
+    <string name="send">Add a new Activity</string>
+    <string name="newMessage">Enter in the Mintues worked</string>
+    <string name="optional">Optional</string>
+    <string name="comments">Add a comment about your Activity</string>
+    <string name="newMessage_Title">Create a New </string>
+    <string name="Activity">Activity</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="showAct">Show Passed Activites</string>
+    <string name="pick">Pick the Activity you did </string>
+    <string name="actTitle">Enter Title for Activity</string>
+    <string name="actLabel">Activity Details</string>
+    <string name="editButton">Edit Activity Details</string>
+    <string name="deleteButton">Delete Activity</string>
+    <string name="total">Current Month mins</string>
+    <string name="monthTitle">Choose a Month</string>
+    <string name="last">Last Month Mins</string>
+    <string name="monthCancel">Month selection Canceld</string>
+    <string name="actSelect">Activity Selected :</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
+

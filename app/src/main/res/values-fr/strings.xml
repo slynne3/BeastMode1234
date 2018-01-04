@@ -12,5 +12,36 @@
     <string name="_1_weight_control_n_2_prevent_health_problems_n_3_improves_your_mood_n_4_energy_booster_n_5_improves_your_sleep_n_6_can_be_a_social_activity">1. Contrôle du poids\n 2. Prévenir les problèmes de santé\n 3. Améliore votre humeur\n 4. Booster d\'énergie\n 5. Améliore votre sommeil\n 6. Peut être une activité sociale\n</string>
     <string name="foodGuide">Vous trouverez ci-dessous le lien vers le Guide alimentaire canadien. Ce guide vous donnera une quantité recommandée de portions de chaque type d\'aliment dans une alimentation saine.</string>
     <string name="food_tracker">Le Traqueur</string>
-
+    <string name="new_activity">Sélectionnez une nouvelle activité</string>
+    <string name="label">
+Cliquez sur le bouton ci-dessous pour sélectionner une nouvelle activité</string>
+    <string name="send">
+Ajouter une nouvelle activité</string>
+    <string name="newMessage">Entrez dans les Mintues travaillés</string>
+    <string name="optional">Optionnel</string>
+    <string name="comments">
+Ajouter un commentaire sur votre activité</string>
+    <string name="newMessage_Title">Créer un nouveau </string>
+    <string name="Activity">Activité</string>
+    <string name="ok">Daccord</string>
+    <string name="cancel">
+Annuler</string>
+    <string name="showAct">
+Afficher les activités approuvées</string>
+    <string name="pick">Choisissez l activité que vous avez réalisée </string>
+    <string name="actTitle">
+Entrer le titre pour l activité</string>
+    <string name="actLabel">
+Détails de l activité</string>
+    <string name="editButton">Modifier les détails de l activité</string>
+    <string name="deleteButton">
+Supprimer l activité</string>
+    <string name="total">
+Mintues du mois en cours</string>
+    <string name="monthTitle">Choisissez un mois</string>
+    <string name="last">Le mois dernier</string>
+    <string name="monthCancel">
+Sélection du mois</string>
+    <string name="actSelect">
+Activité sélectionnée:</string>
 </resources>

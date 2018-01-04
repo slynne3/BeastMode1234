@@ -10,6 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".ToolbarTest">
+        <activity android:name=".Calorie_Count" />
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,6 +28,8 @@
         <activity android:name=".about_temperature" />
         <activity android:name=".WeeklyTemp" />
         <activity android:name=".TemperatureDetails" />
+        <activity android:name=".TrackingActivity"></activity>
+        <activity android:name=".ShowActivityList"></activity>
     </application>
 
 </manifest>
