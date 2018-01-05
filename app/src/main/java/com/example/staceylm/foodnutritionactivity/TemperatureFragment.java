@@ -32,7 +32,7 @@ public class TemperatureFragment extends Fragment {
 
         long id = 0;
         if (passInfo != null) {
-            id = passInfo.getLong("ID");
+            id = passInfo.getLong("id");
         }
     }
 

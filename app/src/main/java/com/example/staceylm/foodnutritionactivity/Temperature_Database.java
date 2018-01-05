@@ -12,7 +12,7 @@ import android.util.Log;
 public class Temperature_Database extends SQLiteOpenHelper {
     public final static String TABLE_NAME = "TemperatureTable";
     private static final String DATABASE_NAME = "Temperature.db";
-    private static final int VERSION_NUM = 4;
+    private static final int VERSION_NUM = 5;
     private static final String KEY_ID = "tempId";
     public static final String TEMP_TEMPERATURE = "temperature";
     public static final String TEMP_TIME = "time";
