@@ -70,9 +70,10 @@ public class Thermostat extends AppCompatActivity {
         /*
         Query that queries the Day/Time/Temp/ID for the user created rules
          */
+
         cursor = tempDatabase.query(false, dbHelper.getTableName(), new String[] {dbHelper.getTempDay(), dbHelper.getTempTemperature(), dbHelper.getTempTime(), dbHelper.getKeyId()},
                 null, null , null, null, dbHelper.getTempDay() + " DESC," + dbHelper.getTempTime() + " ASC" , null);
-
+   
         /*
         Creates a String from the DataBaseQuery and adds the String to the ArrayList
          */
@@ -126,7 +127,6 @@ public class Thermostat extends AppCompatActivity {
                 tempValues.put(Temperature_Database.TEMP_TEMPERATURE, tempInput);
                 tempValues.put(Temperature_Database.getTempDay(), dayInput);
                 tempDatabase.insert(Temperature_Database.TABLE_NAME, null, tempValues);
-
                 tempAdapter.notifyDataSetChanged();
                 editTime.setText("");
                 editTemp.setText("");
@@ -139,6 +139,7 @@ public class Thermostat extends AppCompatActivity {
                 String message = "You have successfully added a temperature rule";
                 int duration = Snackbar.LENGTH_SHORT;
                 showSnackbar(snackView, message, duration);
+
             }
 
         });
